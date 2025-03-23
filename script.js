@@ -37,7 +37,7 @@ const perguntas = [
     },
     {
         pergunta: 'Qual animal  tem a mordida capaz de esmagar ossos?',
-        opcoes: ['Hinea', 'Gorila', 'Suricato', 'Lobo'],
+        opcoes: ['Hiena', 'Gorila', 'Suricato', 'Lobo'],
         resposta: 'Hiena'
     },
     {
