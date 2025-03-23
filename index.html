@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./img/logo.png" alt="logo do site">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Fique por dentro</a></li>
+                <li><a href="#jogo">Jogar</a></li>
+            </ul>
+            <span class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+            <div class="musicas">
+                <audio id="musica1" src="./musica/ciclo-da-vida.mp3"></audio>
+                <div class="controles-musica">
+                    <button id="play1"><i class="fas fa-play"></i></button>
+                    <button id="stop1"><i class="fas fa-stop"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="inicio">
+        <section id="cartas-section" class="container">
+            <h1>bem-vindo ao animal game!</h1>
+            <p>Para começar a jogar leia o conteúdo das cartas.</p>
+            <div class="cartas">
+                <div class="carta" data-animal="leao">
+                    <div class="frente" style="background-image: url('./img/leao.jpg'); background-size: cover;"></div>
+                    <div class="verso">
+                        <!-- <h2>Leão</h2> -->
+                        <p>Os leões são os únicos grandes felinos que vivem em grupos sociais, chamados de 
+                            manadas ou coalizões. Enquanto os machos são conhecidos por proteger o território 
+                            e a manada, as leoas são as principais caçadoras.</p>
+                    </div>
+                </div>
+                <div class="carta" data-animal="elefante">
+                    <div class="frente" style="background-image: url('./img/elefante.jpg'); background-size: cover;"></div>
+                    <div class="verso">
+                        <!-- <h2>Elefante</h2> -->
+                        <p>Os elefantes têm uma memória incrível e podem se lembrar de rotas de migração e locais de água 
+                            por décadas. Eles também são capazes de reconhecer outros elefantes mesmo após muitos anos 
+                            de separação.</p>
+                    </div>
+                </div>
+                <div class="carta" data-animal="tigre">
+                    <div class="frente" style="background-image: url('./img/tigre.jpg'); background-size: cover;"></div>
+                    <div class="verso">
+                        <!-- <h2>Tigre</h2> -->
+                        <p>Cada tigre tem um padrão único de listras, que funciona como uma "impressão digital". 
+                            Além disso, eles são excelentes nadadores e adoram água, ao contrário de muitos outros felinos.</p>
+                    </div>
+                </div>
+                <div class="carta" data-animal="gorila">
+                    <div class="frente" style="background-image: url('./img/gorila.jpg'); background-size: cover;"></div>
+                    <div class="verso">
+                        <!-- <h2>Gorila</h2> -->
+                        <p>Gorilas compartilham cerca de 98% do DNA com os seres humanos. Eles são altamente inteligentes, 
+                            capazes de usar ferramentas e aprender linguagem de sinais básica.</p>
+                    </div>
+                </div>
+                <div class="carta" data-animal="hiena">
+                    <div class="frente" style="background-image: url('./img/hiena.jpg'); background-size: cover;"></div>
+                    <div class="verso">
+                        <!-- <h2>Hiena</h2> -->
+                        <p>As hienas têm uma das mordidas mais fortes do reino animal, capazes de esmagar ossos. 
+                            Além disso, as hienas fêmeas são dominantes e maiores que os machos.</p>
+                    </div>
+                </div>
+                <div class="carta" data-animal="lobo">
+                    <div class="frente" style="background-image: url('./img/lobo.jpg'); background-size: cover;"></div>
+                    <div class="verso">
+                        <!-- <h2>Lobo</h2> -->
+                        <p>Lobos são animais altamente sociais e se comunicam através de uivos, que podem ser ouvidos a até 16 km de distância. 
+                            Eles vivem em matilhas com uma hierarquia bem definida..</p>
+                    </div>
+                </div>
+                <div class="carta" data-animal="rinoceronte">
+                    <div class="frente" style="background-image: url('./img/rinoceronte.jpg'); background-size: cover;"></div>
+                    <div class="verso">
+                        <!-- <h2>Rinoceronte</h2> -->
+                        <p>Os rinocerontes têm uma visão ruim, mas um olfato e audição extremamente apurados. Eles também podem 
+                            correr a velocidades de até 50 km/h, apesar do seu tamanho e peso.</p>
+                    </div>
+                </div>
+                <div class="carta" data-animal="suricato">
+                    <div class="frente" style="background-image: url('./img/suricato.jpg'); background-size: cover;"></div>
+                    <div class="verso">
+                        <!-- <h2>Suricato</h2> -->
+                        <p>Os suricatos têm um sistema social altamente organizado, onde cada membro do grupo tem uma função 
+                            específica, como vigiar predadores, cuidar dos filhotes ou procurar comida. O mais curioso é 
+                            que os suricatos ensinaram os humanos a detectar minas terrestres! Devido ao seu olfato apurado, 
+                            eles foram treinados para localizar explosivos sem ativá-los</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <section id="sobre" class="container">
+            <h2>Fique por dentro!</h2>
+            <p>
+                Os animais não são recursos a serem explorados, mas seres vivos que merecem respeito e proteção. 
+                A caça é uma prática cruel, insustentável e desnecessária, que precisa ser combatida através de leis mais rigorosas, 
+                educação ambiental e conscientização. Cada animal morto é uma perda irreparável para o planeta e para as gerações 
+                futuras. 
+            </p>
+            <p>
+                A vida selvagem está ameaçada por uma série de fatores, incluindo a destruição de habitats, a caça ilegal, a poluição e as mudanças climáticas. 
+                É importante que tomemos medidas para proteger a vida selvagem e garantir que ela continue a prosperar 
+                para as gerações futuras. Diga NÃO à caça de animais.
+            </p>
+        </section>
+        <hr class="linha2">
+        <section id="jogo" class="container">
+            <div class="container-content">
+                <h2>Hora do jogo!</h2>
+                <div id="pergunta"></div>
+                <div id="opcoes"></div>
+                <button id="proxima">Próxima</button>
+                <div id="resultado"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/JaninyNobrega" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="www.linkedin.com/in/janiny-a-da-nóbrega-27506b106" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/_jaaniny?igsh=NWdyOWN5aDdnNnB5&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2025 Janiny Nóbrega. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+body {
+    background: url(./img/fundo1.jpg) no-repeat center center/cover;
+    background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-attachment: fixed; /* Fixa a imagem no fundo */
+    font-family: "Rowdies", sans-serif;
+    text-align: center;
+    margin: 0; /* Removido para garantir que o cabeçalho e o rodapé ocupem toda a largura */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgba(51, 51, 51, 0.7); /* Cor e transparência iguais */
+    color: #fff;
+    padding: 10px 0;
+    height: 50px; /* Altura igual */
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* Adicionado: fixa o cabeçalho no topo */
+    top: 0; /* Adicionado: garante que o cabeçalho fique no topo */
+    width: 100%; /* Adicionado: garante que o cabeçalho ocupe toda a largura */
+    z-index: 100; /* Adicionado: garante que o cabeçalho fique acima do conteúdo */
+
+}
+
+main {
+    padding-top: 80px; /* Ajuste o valor conforme necessário */
+    flex: 1;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+hr {
+    width: 65%; /* Define o tamanho da linha para 50% da largura do elemento pai */
+    height: 6px; /* Define a espessura da linha */
+    border: none; /* Remove a borda padrão */
+    background: linear-gradient(to right, black, white); /* Define o gradiente */
+    margin: 20px auto; /* Adiciona margem superior e inferior e centraliza a linha */
+}
+
+.linha2{
+    width: 65%; /* Define o tamanho da linha para 50% da largura do elemento pai */
+    height: 6px; /* Define a espessura da linha */
+    border: none; /* Remove a borda padrão */
+    background: linear-gradient(to right, white, black); /* Define o gradiente */
+    margin: 20px auto; /* Adiciona margem superior e inferior e centraliza a linha */
+}
+
+.logo img {
+    height: 50px; /* Ajuste o tamanho do logo conforme necessário */
+    width: 50px;
+    transition: transform 0.9s ease; /* Adicionado: transição suave */
+    margin-left: 100px;
+    border-radius: 50%; /* Adicionado: torna a logo redonda */
+    border: 2px solid #ccc; /* Adicionado: adiciona uma borda suave */
+
+}
+
+.logo img:hover {
+    transform: scale(1.3); /* Adicionado: aumenta a escala em 10% */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    padding-right: 100px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    position: relative; /* Adicionado: para posicionar a animação */
+    transition: color 0.3s ease; /* Adicionado: transição suave para a cor */
+}
+.nav-links li a:hover {
+    color: black; /* Cor ao passar o mouse */
+}
+
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Ajuste a posição da animação */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black; /* Cor da animação */
+    transform: scaleX(0); /* Começa com escala 0 */
+    transform-origin: left;
+    transition: transform 0.3s ease; /* Transição suave para a escala */
+}
+
+.nav-links li a:hover::before {
+    transform: scaleX(1); /* Animação: escala total ao passar o mouse */
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+/* Musicas */
+
+.musicas {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Adicionado: centraliza a direita */
+}
+
+.controles-musica {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Adicionado: centraliza horizontalmente */
+}
+
+.controles-musica div {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Adicionado: margem à esquerda */
+}
+
+.controles-musica button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    margin-right: 5px; /* Alterado: margem à direita */
+    cursor: pointer;
+    transition: transform 0.9s ease; /* Adicionado: transição suave */
+}
+
+.controles-musica button:hover {
+    color: black;
+   
+}
+
+.controles-musica input[type="range"] {
+    width: 80px;
+    margin: 5px; /* Adicionado: margem à direita*/
+}
+
+/* Cartas */
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.container p{
+    font-family: "Rowdies", sans-serif;
+    font-size: 32px; /* Define o tamanho da fonte para 16 pixels */
+    color: #fff;
+}
+
+.container h2{
+    font-family: 'Bangers', cursive;
+    font-size: 40px;
+    color: black;
+}
+
+.container h1{
+    font-family: 'Bangers', cursive;
+    font-size: 40px;
+    color: black;
+}
+
+.container-content {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0 ,0.2);
+    transition: transform 0.3s;
+    font-family: 'Bangers', cursive;
+    font-size: 32px;
+}
+
+.container-content h2{
+    color: orangered
+}
+
+.cartas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carta {
+    width: 200px;
+    height: 350px;
+    margin: 20px;
+    perspective: 1000px;
+    display: inline-block;
+    transition: transform 0.3s ease; /* Adicionado: transição suave */
+}
+
+.carta:hover {
+    transform: scale(1.1); /* Adicionado: aumenta a escala em 10% */
+}
+
+.carta p{
+    font-size: 20px; /* Define o tamanho da fonte para 16 pixels */
+    font-family: 'Bangers', cursive;
+    color: black
+}
+
+.frente, .verso {
+    font-family: 'Bangers', cursive;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.frente {
+    background-color: rgba(240, 240, 240, 0.7);
+}
+
+.verso {
+    transform: rotateY(180deg);
+}
+
+.carta.virada .frente {
+    transform: rotateY(180deg);
+}
+
+.carta.virada .verso {
+    transform: rotateY(360deg);
+}
+
+/* Jogo */
+.jogo {
+    margin-top: 30px;
+    background-color: rgba(50, 50, 50, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out; /* Adicionado: animação de fade-in */
+}
+
+.jogo h2 {
+    color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+#pergunta {
+    color: #f0f0f0;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+#opcoes button {
+    background-color: #333;
+    color: #f0f0f0;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Adicionado: transição suave */
+}
+
+#opcoes button:hover {
+    background-color: #555;
+}
+
+#proxima {
+    background-color: #007bff;
+    color: #f0f0f0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease; /* Adicionado: transição suave */
+}
+
+#proxima:hover {
+    background-color: #0056b3;
+}
+
+#resultado {
+    color: #f0f0f0;
+    font-size: 1.2em;
+    margin-top: 20px;
+    animation: slideIn 1s ease-in-out; /* Adicionado: animação de slide-in */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: rgba(51, 51, 51, 0.7); /* Cor e transparência iguais */
+    color: #ffffff;
+    padding: 10px 0;
+    height: 50px; /* Altura igual */
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 24px; /* Ajuste o tamanho dos ícones conforme necessário */
+    color: black;
+    transition: color 0.3s;
+}
+
+.social-links a:hover{
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
