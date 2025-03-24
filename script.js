@@ -5,6 +5,7 @@ const proximaBotao = document.getElementById('proxima');
 const resultadoElemento = document.getElementById('resultado');
 const menuToggle = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
+const jogarNovamenteBotao = document.getElementById('jogar-novamente'); // Adicionado
 
 let pontuacao = 0;
 let indicePergunta = 0;
@@ -22,7 +23,7 @@ const perguntas = [
     },
     {
         pergunta: 'Qual animal pode ser ouvido a até 16 km de distância.?',
-        opcoes: ['Tigre', 'Elefante', 'Lobo', 'Gorila'],
+        opcoes: ['Tigre', 'Lobo', 'Elefante', 'Gorila'],
         resposta: 'Lobo'
     },
     {
@@ -47,7 +48,7 @@ const perguntas = [
     },
     {
         pergunta: 'Qual felino é excelente nadador e diferente dos demais adora água?',
-        opcoes: ['Lobo', 'Leão', 'Suricato', 'Tigre'],
+        opcoes: ['Leão', 'Tigre', 'Suricato', 'Lobo'],
         resposta: 'Tigre'
     },
     
@@ -64,6 +65,9 @@ function mostrarPergunta() {
         botao.addEventListener('click', () => verificarResposta(opcao));
         opcoesElemento.appendChild(botao);
     });
+    perguntaElemento.style.display = 'block'; // Adicionado
+    opcoesElemento.style.display = 'block'; // Adicionado
+    proximaBotao.style.display = 'block'; // Adicionado
 }
 
 function verificarResposta(resposta) {
@@ -74,12 +78,14 @@ function verificarResposta(resposta) {
             mostrarPergunta();
         } else {
             mostrarResultado();
+            jogarNovamenteBotao.style.display = 'block';
         }
     } else {
-        resultadoElemento.textContent = 'Você errou! Leia as cartas novamente'; // Mensagem de erro
-        perguntaElemento.style.display = 'none'; // Esconde a pergunta
-        opcoesElemento.style.display = 'none'; // Esconde as opções
-        proximaBotao.style.display = 'none'; // Esconde o botão "Próxima"
+        resultadoElemento.textContent = 'Você errou! Volte ao inicio e leia as cartas novamente';
+        perguntaElemento.style.display = 'none';
+        opcoesElemento.style.display = 'none';
+        proximaBotao.style.display = 'none';
+        jogarNovamenteBotao.style.display = 'block';
     }
 }
 
@@ -88,8 +94,8 @@ function mostrarResultado() {
     opcoesElemento.style.display = 'none';
     proximaBotao.style.display = 'none';
     resultadoElemento.textContent = `Parabéns, você acertou tudo: ${pontuacao} de ${perguntas.length}`;
-    resultadoElemento.style.animation = 'slideIn 1s ease-in-out'; 
-}   
+    resultadoElemento.style.animation = 'slideIn 1s ease-in-out';
+}
 
 cartas.forEach(carta => {
     carta.addEventListener('click', () => {
@@ -103,7 +109,13 @@ menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-mostrarPergunta();
+jogarNovamenteBotao.addEventListener('click', () => {
+    indicePergunta = 0;
+    pontuacao = 0;
+    resultadoElemento.textContent = '';
+    jogarNovamenteBotao.style.display = 'none';
+    mostrarPergunta();
+});
 
 // Musicas 
 
@@ -124,3 +136,5 @@ stop1.addEventListener('click', () => {
     musica1.pause();
     musica1.currentTime = 0;
 });
+
+mostrarPergunta(); // Adicionado

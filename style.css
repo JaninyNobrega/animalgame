@@ -287,18 +287,22 @@ hr {
     background-color: #555;
 }
 
-#proxima {
-    background-color: #007bff;
-    color: #f0f0f0;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: background-color 0.3s ease; /* Adicionado: transição suave */
+#jogar-novamente, #proxima {
+    display: block; /* Garante que os botões sejam exibidos */
+    margin: 20px auto; /* Centraliza horizontalmente e adiciona margem */
+    padding: 10px 20px; /* Adiciona preenchimento aos botões */
+    background-color: #007bff; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para uma mãozinha */
 }
 
 #proxima:hover {
+    background-color: #0056b3;
+}
+
+#jogar-novamente:hover {
     background-color: #0056b3;
 }
 
