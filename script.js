@@ -117,6 +117,26 @@ jogarNovamenteBotao.addEventListener('click', () => {
     mostrarPergunta();
 });
 
+function mostrarResultado() {
+    perguntaElemento.style.display = 'none';
+    opcoesElemento.style.display = 'none';
+    proximaBotao.style.display = 'none';
+    resultadoElemento.textContent = `Parabéns, você acertou tudo: ${pontuacao} de ${perguntas.length}`;
+    resultadoElemento.style.animation = 'slideIn 1s ease-in-out';
+    iniciarFogosArtificio(); // Inicia a animação de fogos de artifício
+}
+
+function iniciarFogosArtificio() {
+    const fogosArtificioElemento = document.getElementById('fogos-artificio');
+    for (let i = 0; i < 50; i++) {
+        const fogoArtificio = document.createElement('div');
+        fogoArtificio.classList.add('fogo-artificio');
+        fogoArtificio.style.left = `${Math.random() * 100}vw`;
+        fogoArtificio.style.animationDelay = `${Math.random() * 2}s`;
+        fogosArtificioElemento.appendChild(fogoArtificio);
+    }
+}
+
 // Musicas 
 
 const musica1 = document.getElementById('musica1');
