@@ -95,6 +95,14 @@ function mostrarResultado() {
     proximaBotao.style.display = 'none';
     resultadoElemento.textContent = `Parabéns, você acertou tudo: ${pontuacao} de ${perguntas.length}`;
     resultadoElemento.style.animation = 'slideIn 1s ease-in-out';
+    iniciarFogosArtificio(); 
+}
+
+function embaralharPerguntas() {
+    for (let i = perguntas.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [perguntas[i], perguntas[j]] = [perguntas[j], perguntas[i]];
+    }
 }
 
 cartas.forEach(carta => {
@@ -114,6 +122,7 @@ jogarNovamenteBotao.addEventListener('click', () => {
     pontuacao = 0;
     resultadoElemento.textContent = '';
     jogarNovamenteBotao.style.display = 'none';
+    embaralharPerguntas(); 
     mostrarPergunta();
 });
 
@@ -157,4 +166,4 @@ stop1.addEventListener('click', () => {
     musica1.currentTime = 0;
 });
 
-mostrarPergunta(); 
+mostrarPergunta();
