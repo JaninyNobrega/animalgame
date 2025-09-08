@@ -5,7 +5,7 @@ const proximaBotao = document.getElementById('proxima');
 const resultadoElemento = document.getElementById('resultado');
 const menuToggle = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
-const jogarNovamenteBotao = document.getElementById('jogar-novamente'); // Adicionado
+const jogarNovamenteBotao = document.getElementById('jogar-novamente'); 
 
 let pontuacao = 0;
 let indicePergunta = 0;
@@ -65,9 +65,9 @@ function mostrarPergunta() {
         botao.addEventListener('click', () => verificarResposta(opcao));
         opcoesElemento.appendChild(botao);
     });
-    perguntaElemento.style.display = 'block'; // Adicionado
-    opcoesElemento.style.display = 'block'; // Adicionado
-    proximaBotao.style.display = 'block'; // Adicionado
+    perguntaElemento.style.display = 'block'; 
+    opcoesElemento.style.display = 'block'; 
+    proximaBotao.style.display = 'block'; 
 }
 
 function verificarResposta(resposta) {
@@ -123,7 +123,7 @@ function mostrarResultado() {
     proximaBotao.style.display = 'none';
     resultadoElemento.textContent = `Parabéns, você acertou tudo: ${pontuacao} de ${perguntas.length}`;
     resultadoElemento.style.animation = 'slideIn 1s ease-in-out';
-    iniciarFogosArtificio(); // Inicia a animação de fogos de artifício
+    iniciarFogosArtificio(); 
 }
 
 function iniciarFogosArtificio() {
@@ -157,4 +157,4 @@ stop1.addEventListener('click', () => {
     musica1.currentTime = 0;
 });
 
-mostrarPergunta(); // Adicionado
+mostrarPergunta(); 
