@@ -45,7 +45,6 @@ ProjetoAnimal/
 
 ## Screenshots
 
-Adicione aqui uma imagem do projeto rodando:
 
 <img width="1065" height="566" alt="image" src="https://github.com/user-attachments/assets/24d41ed0-0c17-4d72-8187-3d1679000e54" />
 
