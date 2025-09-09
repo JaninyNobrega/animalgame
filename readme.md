@@ -1,6 +1,6 @@
 # Projeto Quiz Animal 🦁🐯
 
-Este é um quiz interativo sobre animais, desenvolvido em **JavaScript**, **HTML** e **CSS**. O projeto foi criado há cerca de 5/6 meses para atender um pedido da minha irmã, professora, que buscava uma ferramenta divertida e didática para seus alunos. Recentemente, realizei o deploy na plataforma **Vercel** para tornar o projeto acessível a todos!
+Este é um quiz interativo sobre animais, desenvolvido em **JavaScript**, **HTML** e **CSS**. O projeto foi criado há cerca para atender um pedido da minha irmã, professora, que buscava uma ferramenta divertida e didática para seus alunos. Recentemente, realizei o deploy na plataforma **Vercel** para tornar o projeto acessível a todos!
 
 ## Funcionalidades
 
@@ -47,7 +47,8 @@ ProjetoAnimal/
 
 Adicione aqui uma imagem do projeto rodando:
 
-![Quiz Animal](./screenshot.png)
+<img width="1065" height="566" alt="image" src="https://github.com/user-attachments/assets/24d41ed0-0c17-4d72-8187-3d1679000e54" />
+
 
 ## Autor
 
