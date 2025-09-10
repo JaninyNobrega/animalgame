@@ -1,4 +1,4 @@
-# Projeto Quiz Animal 🦁🐯
+# Projeto Animal Game 🦁🐯
 
 Este é um quiz interativo sobre animais, desenvolvido em **JavaScript**, **HTML** e **CSS**. O projeto foi criado há cerca para atender um pedido da minha irmã, professora, que buscava uma ferramenta divertida e didática para seus alunos. Recentemente, realizei o deploy na plataforma **Vercel** para tornar o projeto acessível a todos!
 
@@ -22,7 +22,7 @@ Este é um quiz interativo sobre animais, desenvolvido em **JavaScript**, **HTML
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/projeto-animal-quiz.git
+   git clone https://github.com/JaninyNobrega/animalgame.git
    ```
 2. Abra a pasta do projeto e o arquivo `index.html` em seu navegador.
 
