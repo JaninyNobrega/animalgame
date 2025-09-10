@@ -22,7 +22,7 @@ Este é um quiz interativo sobre animais, desenvolvido em **JavaScript**, **HTML
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/projeto-animal-quiz.git
+   git clone https://github.com/JaninyNobrega/animalgame.git
    ```
 2. Abra a pasta do projeto e o arquivo `index.html` em seu navegador.
 
