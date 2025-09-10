@@ -173,14 +173,15 @@ hr {
 .container h2{
     font-family: 'Bangers', cursive;
     font-size: 40px;
-    color: black;
+    color: rgba(247, 170, 70, 0.959);
 }
 
 .container h1{
     font-family: 'Bangers', cursive;
     font-size: 40px;
-    color: black;
+    color: rgba(247, 170, 70, 0.959);
 }
+
 
 .container-content {
     background-color: rgba(255, 255, 255, 0.4);
@@ -193,7 +194,7 @@ hr {
 }
 
 .container-content h2{
-    color: orangered
+    color: rgba(245, 142, 8, 0.959)
 }
 
 .cartas {
